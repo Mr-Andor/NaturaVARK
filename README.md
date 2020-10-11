@@ -6,6 +6,7 @@ Instalações:
 npm install react-router-dom
 npm install axios
 npm install redux react-redux
+npm install redux-thunk
 
 //BACKEND//
 npm install express
