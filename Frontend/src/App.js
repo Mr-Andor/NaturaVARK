@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import {BrowserRouter, Route, Link} from 'react-router-dom'; 
-import HomeScreen from "./Telas/HomeScreen";
-import ProductScreen from "./Telas/ProductScreen";
+import HomeScreen from "./telas/HomeScreen";
+import ProductScreen from "./telas/ProductScreen";
 
 function App() {
   let _isMenuOpen = false;
