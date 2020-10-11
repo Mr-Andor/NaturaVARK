@@ -5,6 +5,7 @@ Instalações:
 //FRONTEND//
 npm install react-router-dom
 npm install axios
+npm install redux react-redux
 
 //BACKEND//
 npm install express
