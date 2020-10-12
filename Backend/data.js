@@ -4,7 +4,7 @@ export default {
         name: 'Perfume masculino Homem Sagaz',
         category: 'Perfumes',
         image: '../Assets/Produtos/perfume1.jpg',
-        price: 150,
+        price: 149.90.toFixed(2),
         countInStock: 10
     },
     {
@@ -12,7 +12,7 @@ export default {
         name: 'Perfume feminino Luna',
         category: 'Perfumes',
         image: '../Assets/Produtos/perfume2.jpg',
-        price: 180,
+        price: 180.00.toFixed(2),
         countInStock: 13
     },
     {
@@ -20,7 +20,7 @@ export default {
         name: 'Perfume Humor a Dois',
         category: 'Perfumes',
         image: '../Assets/Produtos/perfume3.jpg',
-        price: 107,
+        price: 107.00.toFixed(2),
         countInStock: 19
     },
     {
@@ -28,7 +28,7 @@ export default {
         name: 'Perfume feminino Essencial',
         category: 'Perfumes',
         image: '../Assets/Produtos/perfume4.jpg',
-        price: 196,
+        price: 196.00.toFixed(2),
         countInStock: 2
     },
     {
@@ -36,7 +36,8 @@ export default {
         name: 'Shampoo Natura Plant',
         category: 'Shampoo',
         image: '../Assets/Produtos/shampoo1.jpg',
-        price: 35
+        price: 35.00.toFixed(2),
+        countInStock: 15
     },
 
     {
@@ -44,7 +45,7 @@ export default {
         name: 'Shampoo Murumuru',
         category: 'Shampoo',
         image: '../Assets/Produtos/shampoo2.jpg',
-        price: 19.90,
+        price: 19.90.toFixed(2),
         countInStock: 45
     },
 
@@ -53,7 +54,7 @@ export default {
         name: 'Sabonete Todo Dia',
         category: 'Sabonete',
         image: '../Assets/Produtos/sabonete1.jpg',
-        price: 20,
+        price: 20.00.toFixed(2),
         countInStock: 52
     },
 ]

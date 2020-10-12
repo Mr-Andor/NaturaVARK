@@ -3,6 +3,7 @@ import "./App.css";
 import {BrowserRouter, Route, Link} from 'react-router-dom'; 
 import HomeScreen from "./telas/HomeScreen";
 import ProductScreen from "./telas/ProductScreen";
+import CartScreen from "./telas/CartScreen";
 
 function App() {
   let _isMenuOpen = false;
@@ -51,6 +52,7 @@ function App() {
             <div className="content">
               <Route path="/product/:id" component={ProductScreen} />
               <Route path="/" exact={true} component={HomeScreen} />
+              <Route path="/carrinho/:id?" component={CartScreen} />
               
             </div>
           </ul>
