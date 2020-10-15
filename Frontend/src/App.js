@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import HomeScreen from "./telas/HomeScreen";
 import ProductScreen from "./telas/ProductScreen";
 import CartScreen from "./telas/CartScreen";
+import SigninScreen from "./telas/SigninScreen";
 
 function App() {
   let _isMenuOpen = false;
@@ -28,7 +29,7 @@ function App() {
 
           <div className="header-links">
             <a href="cart.html">Carrinho</a>
-            <a href="signin.html">Entrar</a>
+            <Link to="/signin">Entrar</Link>
           </div>
         </header>
         <aside className="sidebar">
@@ -50,6 +51,7 @@ function App() {
         <main className="main">
           <ul>
             <div className="content">
+              <Route path="/signin" component={SigninScreen} />
               <Route path="/product/:id" component={ProductScreen} />
               <Route path="/" exact={true} component={HomeScreen} />
               <Route path="/carrinho/:id?" component={CartScreen} />
