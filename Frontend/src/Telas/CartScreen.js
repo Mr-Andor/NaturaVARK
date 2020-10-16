@@ -69,7 +69,7 @@ function CartScreen(props) {
 
       <div className="cart-action">
         <h3>
-          Subtotal ({cartItems.reduce((a, c) => a + c.qnt, 0)} items) : R$
+          Subtotal ({Number(cartItems.reduce((a, c) => a + c.qnt, 0))} items) : R$
           {cartItems.reduce((a, c) => a + c.price * c.qnt, 0).toFixed(2)}
         </h3>
         <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}>

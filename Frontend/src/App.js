@@ -5,9 +5,14 @@ import HomeScreen from "./telas/HomeScreen";
 import ProductScreen from "./telas/ProductScreen";
 import CartScreen from "./telas/CartScreen";
 import SigninScreen from "./telas/SigninScreen";
+import RegisterScreen from "./telas/RegisterScreen";
+import { useSelector } from "react-redux";
 
 function App() {
   let _isMenuOpen = false;
+
+  const userSignin = useSelector(state => state.userSignin);
+  const {userInfo} = userSignin;
 
   const toggleMenu = () => {
     if (_isMenuOpen)
@@ -29,7 +34,11 @@ function App() {
 
           <div className="header-links">
             <a href="cart.html">Carrinho</a>
-            <Link to="/signin">Entrar</Link>
+            {
+              userInfo ? <Link to="/profile">Olá, {userInfo.name}!</Link> :
+              <Link to="/signin">Entrar</Link>
+            }
+            
           </div>
         </header>
         <aside className="sidebar">
@@ -52,6 +61,7 @@ function App() {
           <ul>
             <div className="content">
               <Route path="/signin" component={SigninScreen} />
+              <Route path="/register" component={RegisterScreen} />
               <Route path="/product/:id" component={ProductScreen} />
               <Route path="/" exact={true} component={HomeScreen} />
               <Route path="/carrinho/:id?" component={CartScreen} />

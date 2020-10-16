@@ -17,11 +17,39 @@ router.post('/signin', async (req, res) => {
         email: signinUser.email,
         isAdmin: signinUser.isAdmin,
         token: getToken(signinUser),
+        natucoin: signinUser.natucoin,
+        isTrained: signinUser.isTrained
       });
     } else {
-      res.status(401).send({ message: 'Invalid Email or Password.' });
+      res.status(401).send({ message: 'Senha ou email invalidos' });
     }
   });
+
+  
+router.post('/register', async (req, res) => {
+  const user = new User({
+    cpf: req.body.cpf,
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+
+  });
+  const newUser = await user.save();
+  if(newUser){
+    res.send({
+      _id: newUser.id,
+      name: newUser.name,
+      cpf: newUser.cpf,
+      email: newUser.email,
+      isAdmin: newUser.isAdmin,
+      token: getToken(newUser),
+      natucoin: newUser.natucoin,
+      isTrained: newUser.isTrained
+    }); 
+  } else {
+    res.status(401).send({ message: 'Dados de usuário invalidos.' });
+  }
+});
 
 router.get("/createadmin", async (req, res) =>{
 
