@@ -1,23 +1,11 @@
 # NaturaVARK
 
-Instalações:
+Este é um ambiente de teste para um projeto de faculdade e possui apenas as funções básicas para realizar os testes com algumas telas e funções que serviram apenas como mockup durante a apresentação do projeto para uma banca avaliadora. 
 
-###FRONTEND  
-npm install react-router-dom  
-npm install axios  
-npm install redux react-redux  
-npm install redux-thunk  
-npm install js-cookie  
+O cadastro dos itens está fixo em um script em vez de um cadastro por dashboard pois não era necessário para realizar os testes. O fluxo segue apenas até o carrinho pois a proposta do projeto era a integração do token como um serviço, não entregar um e-commerce. Logo, as implementações do projeto são feitas com apenas isso em mente.
 
-###BACKEND  
-npm install express  
-npm install @babel/cli @babel/core @babel/node @babel/preset-env nodemon --save-dev  
-npm install mongoose  
-npm install dotenv // Nós mesmos criamos. É o .env  
-npm install jsonwebtoken  
-npm install body-parser  
+*BUGS CONHECIDOS*:
 
-##BD:   
-MongoDB  
-MongoDB Compass  
-
+- O link do Carrinho não retorna o endereço correto.
+- O mostrador de subtotal de itens está concatenando o total de itens em vez de realizar uma soma se você altera a quantidade de itens no carrinho
+- Clicar no link do Carrinho irá realizar um logout do usuário, caso esteja logado.
